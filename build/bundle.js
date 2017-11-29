@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c74461232099d810fd35"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "fe05a3cae43cb62ed782"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -3927,14 +3927,14 @@ var _reactDom = __webpack_require__(38);
 
 __webpack_require__(86);
 
-var _CommemtApp = __webpack_require__(90);
+var _Index = __webpack_require__(90);
 
-var _CommemtApp2 = _interopRequireDefault(_CommemtApp);
+var _Index2 = _interopRequireDefault(_Index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var dom = document.querySelector("#root");
-(0, _reactDom.render)(_react2.default.createElement(_CommemtApp2.default, null), dom);
+(0, _reactDom.render)(_react2.default.createElement(_Index2.default, null), dom);
 
 /***/ }),
 /* 72 */
@@ -24663,13 +24663,13 @@ var _index6 = _interopRequireDefault(_index5);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _CommentInput = __webpack_require__(201);
+var _Header = __webpack_require__(201);
 
-var _CommentInput2 = _interopRequireDefault(_CommentInput);
+var _Header2 = _interopRequireDefault(_Header);
 
-var _CommentList = __webpack_require__(202);
+var _Date = __webpack_require__(202);
 
-var _CommentList2 = _interopRequireDefault(_CommentList);
+var _Date2 = _interopRequireDefault(_Date);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24680,20 +24680,20 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-    CommentApp: {
-        displayName: 'CommentApp'
+    Index: {
+        displayName: 'Index'
     }
 };
 
-var _FReactNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
-    filename: 'F:/react/src/comment/commentApp/CommemtApp.jsx',
+var _FReactSamllBookNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+    filename: 'F:/react-samll-book/src/app/Index.jsx',
     components: _components,
     locals: [module],
     imports: [_react3.default]
 });
 
-var _FReactNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
-    filename: 'F:/react/src/comment/commentApp/CommemtApp.jsx',
+var _FReactSamllBookNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+    filename: 'F:/react-samll-book/src/app/Index.jsx',
     components: _components,
     locals: [],
     imports: [_react3.default, _index2.default]
@@ -24701,35 +24701,52 @@ var _FReactNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.defaul
 
 function _wrapComponent(id) {
     return function (Component) {
-        return _FReactNode_modulesReactTransformHmrLibIndexJs2(_FReactNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+        return _FReactSamllBookNode_modulesReactTransformHmrLibIndexJs2(_FReactSamllBookNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
     };
 }
 
-var CommentApp = _wrapComponent('CommentApp')(function (_Component) {
-    _inherits(CommentApp, _Component);
+var Index = _wrapComponent('Index')(function (_Component) {
+    _inherits(Index, _Component);
 
-    function CommentApp() {
-        _classCallCheck(this, CommentApp);
+    function Index() {
+        _classCallCheck(this, Index);
 
-        return _possibleConstructorReturn(this, (CommentApp.__proto__ || Object.getPrototypeOf(CommentApp)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).call(this));
+
+        _this.state = {
+            isShowHeader: true
+        };
+        return _this;
     }
 
-    _createClass(CommentApp, [{
+    _createClass(Index, [{
+        key: 'showHandleTitle',
+        value: function showHandleTitle() {
+            this.setState({
+                isShowHeader: !this.state.isShowHeader
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react3.default.createElement(
                 'div',
                 null,
-                _react3.default.createElement(_CommentInput2.default, null),
-                _react3.default.createElement(_CommentList2.default, null)
+                _react3.default.createElement(_Date2.default, null),
+                _react3.default.createElement(
+                    'button',
+                    { type: 'button', className: 'btn btn-large btn-block btn-default', onClick: this.showHandleTitle.bind(this) },
+                    '\u663E\u793A\u6216\u9690\u85CF'
+                ),
+                this.state.isShowHeader ? _react3.default.createElement(_Header2.default, null) : null
             );
         }
     }]);
 
-    return CommentApp;
+    return Index;
 }(_react2.Component));
 
-exports.default = CommentApp;
+exports.default = Index;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)(module)))
 
 /***/ }),
@@ -31973,20 +31990,20 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-    CommentInput: {
-        displayName: 'CommentInput'
+    Header: {
+        displayName: 'Header'
     }
 };
 
-var _FReactNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
-    filename: 'F:/react/src/comment/commentInput/CommentInput.jsx',
+var _FReactSamllBookNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+    filename: 'F:/react-samll-book/src/app/Header.jsx',
     components: _components,
     locals: [module],
     imports: [_react3.default]
 });
 
-var _FReactNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
-    filename: 'F:/react/src/comment/commentInput/CommentInput.jsx',
+var _FReactSamllBookNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+    filename: 'F:/react-samll-book/src/app/Header.jsx',
     components: _components,
     locals: [],
     imports: [_react3.default, _index2.default]
@@ -31994,70 +32011,57 @@ var _FReactNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.defaul
 
 function _wrapComponent(id) {
     return function (Component) {
-        return _FReactNode_modulesReactTransformHmrLibIndexJs2(_FReactNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+        return _FReactSamllBookNode_modulesReactTransformHmrLibIndexJs2(_FReactSamllBookNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
     };
 }
 
-var CommentInput = _wrapComponent('CommentInput')(function (_Component) {
-    _inherits(CommentInput, _Component);
+var Header = _wrapComponent('Header')(function (_Component) {
+    _inherits(Header, _Component);
 
-    function CommentInput() {
-        _classCallCheck(this, CommentInput);
+    function Header() {
+        _classCallCheck(this, Header);
 
-        return _possibleConstructorReturn(this, (CommentInput.__proto__ || Object.getPrototypeOf(CommentInput)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
+
+        console.log("constructor");
+        return _this;
     }
 
-    _createClass(CommentInput, [{
+    _createClass(Header, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            console.log('component Will Mount');
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            console.log('component Did Mount');
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            console.log('component will unmount');
+        }
+    }, {
         key: 'render',
         value: function render() {
+            console.log('render');
             return _react3.default.createElement(
                 'div',
-                { className: 'comment-input' },
+                null,
                 _react3.default.createElement(
-                    'div',
-                    { className: 'comment-field' },
-                    _react3.default.createElement(
-                        'span',
-                        { className: 'comment-field-name' },
-                        '\u7528\u6237\u540D\uFF1A'
-                    ),
-                    _react3.default.createElement(
-                        'div',
-                        { className: 'comment-field-input' },
-                        _react3.default.createElement('input', null)
-                    )
-                ),
-                _react3.default.createElement(
-                    'div',
-                    { className: 'comment-field' },
-                    _react3.default.createElement(
-                        'span',
-                        { className: 'comment-field-name' },
-                        '\u8BC4\u8BBA\u5185\u5BB9\uFF1A'
-                    ),
-                    _react3.default.createElement(
-                        'div',
-                        { className: 'comment-field-input' },
-                        _react3.default.createElement('textarea', null)
-                    )
-                ),
-                _react3.default.createElement(
-                    'div',
-                    { className: 'comment-field-button' },
-                    _react3.default.createElement(
-                        'button',
-                        null,
-                        '\u53D1\u5E03'
-                    )
+                    'h1',
+                    null,
+                    'small books'
                 )
             );
         }
     }]);
 
-    return CommentInput;
+    return Header;
 }(_react2.Component));
 
-exports.default = CommentInput;
+exports.default = Header;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)(module)))
 
 /***/ }),
@@ -32098,20 +32102,20 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-    CommentList: {
-        displayName: 'CommentList'
+    Clock: {
+        displayName: 'Clock'
     }
 };
 
-var _FReactNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
-    filename: 'F:/react/src/comment/commentList/CommentList.jsx',
+var _FReactSamllBookNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+    filename: 'F:/react-samll-book/src/app/Date.jsx',
     components: _components,
     locals: [module],
     imports: [_react3.default]
 });
 
-var _FReactNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
-    filename: 'F:/react/src/comment/commentList/CommentList.jsx',
+var _FReactSamllBookNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+    filename: 'F:/react-samll-book/src/app/Date.jsx',
     components: _components,
     locals: [],
     imports: [_react3.default, _index2.default]
@@ -32119,34 +32123,53 @@ var _FReactNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.defaul
 
 function _wrapComponent(id) {
     return function (Component) {
-        return _FReactNode_modulesReactTransformHmrLibIndexJs2(_FReactNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+        return _FReactSamllBookNode_modulesReactTransformHmrLibIndexJs2(_FReactSamllBookNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
     };
 }
 
-var CommentList = _wrapComponent('CommentList')(function (_Component) {
-    _inherits(CommentList, _Component);
+var Clock = _wrapComponent('Clock')(function (_Component) {
+    _inherits(Clock, _Component);
 
-    function CommentList() {
-        _classCallCheck(this, CommentList);
+    function Clock() {
+        _classCallCheck(this, Clock);
 
-        return _possibleConstructorReturn(this, (CommentList.__proto__ || Object.getPrototypeOf(CommentList)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Clock.__proto__ || Object.getPrototypeOf(Clock)).call(this));
+
+        _this.state = {
+            date: new Date()
+        };
+        return _this;
     }
 
-    _createClass(CommentList, [{
+    _createClass(Clock, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            var _this2 = this;
+
+            this.timer = setInterval(function () {
+                _this2.setState({ date: new Date() });
+            }, 1000);
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react3.default.createElement(
                 'div',
                 null,
-                'CommentList'
+                _react3.default.createElement(
+                    'h1',
+                    null,
+                    '\u5F53\u524D\u65F6\u95F4\u662F\uFF1A'
+                ),
+                this.state.date.toLocaleTimeString()
             );
         }
     }]);
 
-    return CommentList;
+    return Clock;
 }(_react2.Component));
 
-exports.default = CommentList;
+exports.default = Clock;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)(module)))
 
 /***/ })

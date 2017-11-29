@@ -1,9 +1,9 @@
 import React,{Component} from "react"
 import {render} from "react-dom";
 import './css/style.css'
-import CommentApp from './comment/commentApp/CommemtApp'
+import Index from './app/Index'
 
 
 var dom = document.querySelector("#root");
-render(<CommentApp/>, dom);
+render(<Index />, dom);
 
